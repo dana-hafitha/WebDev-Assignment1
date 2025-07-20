@@ -1,0 +1,592 @@
+/* in here we write the style of the main page  */
+/* Header styling */
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 80px;
+  
+}
+
+header {
+  background-color: #021024;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+/* Flex container */
+header .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+header .navbar-container .logo a {
+  font-size: 35px;
+  font-family: Georgia, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+/* navbar links */
+header .navbar-container .navbar-links a {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 100;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+
+}
+
+/* navbar link underline */
+header .navbar-container .navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  /* distance below text */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+/* navbar link hover effect */
+header .navbar-container .navbar-links a:hover::after {
+  width: 100%;
+  /* full width of the underline when hovered */
+}
+
+header .navbar-container .links-small {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  /* display: none; hidden by default */
+}
+
+
+/* hero section design */
+.hero {
+  background: linear-gradient(to bottom, #021024, #052659);
+  padding: 200px 0px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  color: rgb(186, 212, 241);
+  margin-bottom: 20px;
+  font-family: Georgia, sans-serif;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #c1d4ec;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, #5483B3, #7DA0CA);
+  color: #021024;
+  padding: 12px 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #7DA0CA, #C1E8FF);
+  color: #052659;
+  transform: scale(1.05);
+}
+
+/* end of hero section design */
+
+/* start of featured products section */
+.featured-products {
+  padding: 60px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #052659;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product-card {
+  background: linear-gradient(145deg, #052659, #021024);
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  color: #C1E8FF;
+  margin-bottom: 10px;
+  font-family: Georgia, sans-serif;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #7DA0CA;
+}
+
+/* end of featured products section */
+
+
+/* beginning of footer styling */
+.footer {
+  background-image: linear-gradient(to top, #021024, #052659);
+  padding: 40px 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+.footer-brand h3 {
+  font-family: Georgia, sans-serif;
+  font-size: 21px;
+  color: rgb(186, 212, 241);
+}
+
+.footer-brand p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: rgb(186, 212, 241);
+}
+
+.footer-links a {
+  display: block;
+  color: rgb(186, 212, 241);
+  margin-bottom: 8px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  color: #C1E8FF;
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  color: rgb(186, 212, 241);
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: rgb(186, 212, 241);
+  font-size: 14px;
+}
+
+.back-to-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #5483B3;
+  color: #021024;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #7DA0CA;
+  transform: translateY(-3px);
+}
+/* end of footer styling */
+
+/* start about us page styling */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.about-page .about-us {
+  flex-grow: 1;
+}
+
+.about-us {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us .content-wrapper {
+  max-width: 1200px;
+}
+
+.about-us h1 {
+  font-size: 44px;
+  color: #052659;
+  font-weight: bold;
+  font-family: Georgia, sans-serif;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: #052659;
+  margin: 10px auto;
+}
+/* end of about us page styling */
+
+/* start of contact page styling */
+.contact {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact h1 {
+  font-size: 44px;
+  color: #052659;
+  margin-bottom: 20px;
+  font-family: Georgia, sans-serif;
+}
+
+.contact p {
+  color: #021024;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  background-color: #052659;
+  color: #C1E8FF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #C1E8FF;
+}
+
+.contact-form .btn {
+  background: linear-gradient(to right, #5483B3, #7DA0CA);
+  color: #021024;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form .btn:hover {
+  background: linear-gradient(to right, #7DA0CA, #C1E8FF);
+  transform: scale(1.05);
+}
+/* end of contact us styling */
+
+
+
+/* start of services page styling */
+.services {
+  color: #C1E8FF;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.services h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-family: Georgia, sans-serif;
+  color: #052659;
+}
+
+.services p {
+  color: #4677a8;
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.service-card {
+  background-image: linear-gradient(145deg, #021024, #052659);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  font-size: 22px;
+  color: #d5ebf8;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #c1d4ec;
+  font-size: 16px;
+}
+/* end of services page styling */
+
+.portfolio {
+  color: #C1E8FF;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.portfolio h1 {
+ font-size: 44px;
+  margin-bottom: 20px;
+  font-family: Georgia, sans-serif;
+  color: #052659;
+}
+
+.portfolio p {
+  color: #4677a8;
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.portfolio-card {
+  background-image: linear-gradient(145deg, #021024, #052659);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px; /* fixed height */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.portfolio-card h3 {
+  font-size: 22px;
+  color: #d5ebf8;
+  margin-bottom: 10px;
+}
+
+.portfolio-card p {
+  color: #c1d4ec;
+  font-size: 16px;
+}
+/* end of portfolio page styling */
+
+
+/* album page styling */
+.album {
+  color: #C1E8FF;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.album h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-family: Georgia, sans-serif;
+  color: #052659;
+}
+
+.album p {
+  color: #4677a8;
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.album-grid img {
+  width: 100%;
+  height: 200px; /* fixed height */
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-grid img:hover {
+  transform: scale(1.05);
+}
+/* end of album page styling */
+
+
+/* policy page styling for policy.html and terms.html and returns.html */
+.policy-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.policy-page .policy {
+  flex-grow: 1;
+}
+
+.policy {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.policy h1 {
+  font-size: 44px;
+  color: #052659;
+  font-weight: bold;
+  font-family: Georgia, sans-serif;
+  margin-bottom: 20px;
+}
+
+.policy p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: #052659;
+  margin: 10px auto;
+}
+/* end of policy page styling */
+
+
+/* FAQ page styling */
+.faq-page {
+  color: #C1E8FF;
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-page h1 {
+  font-size: 36px;
+  color: #052659;
+  font-weight: bold;
+  font-family: Georgia, sans-serif;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  border-left: 4px solid #021024;
+  padding-left: 20px;
+}
+
+.faq-item h3 {
+  font-size: 25px;
+  color: #052659;
+  font-weight: bold;
+  font-family: Georgia, sans-serif;
+  margin-bottom: 20px;
+}
+
+.faq-item p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #052659;
+  margin: 10px auto;
+}
+/* end of FAQ page stylings */

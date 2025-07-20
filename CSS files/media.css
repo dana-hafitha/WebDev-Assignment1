@@ -1,0 +1,35 @@
+/* adding the media queries for all sizes of screens */
+
+/* for small screen */
+@media (max-width: 600px) {
+    /* start with the nav bar */
+    nav .navbar-container .navbar-links{
+        display: none;
+    }
+}
+
+/* for medium screen */
+@media (min-width: 601px) and (max-width: 900px) {
+   /* start with the nav bar */
+    nav .navbar-container .navbar-links{
+        display: none;
+    }
+}
+
+/* for large screens */
+@media (min-width: 901px) and (max-width: 1200px) {
+  /* start with the nav bar */
+    nav .navbar-container .links-small{
+        display: none;
+    }
+}
+
+/* for extra large screens */
+@media (min-width: 1201px) {
+  /* start with the nav bar */
+    nav .navbar-container .links-small{
+        display: none;
+    }
+
+
+}
